@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo de exercicio</title>
+    <title>Tabuada</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Titulo</h1>
+        <h1>Tabuada</h1>
     </header>
     <section>
         <div>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et fugit voluptatem illum illo. Consectetur similique officiis cumque necessitatibus veritatis, harum, omnis sapiente inventore veniam, sequi impedit quibusdam animi cum! Ab?
+            <label for="numero">Número:</label>
+            <input type="number" name="numero" id="numero" required>
+            <input type="button" value="Gerar Tabuada" onclick="tabuada()">
         </div>
         <div>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus nostrum unde eum tenetur commodi rem, sunt, labore possimus amet assumenda nam minima dignissimos aliquid iure est necessitatibus a voluptates quos?
+            <p id="tabuada">
+                Digite um numero acima...
+            </p>
         </div>
     </section>
     <footer>

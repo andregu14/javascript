@@ -21,6 +21,31 @@ section {
 
 }
 
+td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 150px;
+}
+
+tbody > tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+.n {
+    text-align: right;
+}
+
+.e {
+    text-align: left;
+}
+
+
+
+
 footer {
     color: white;
     text-align: center;

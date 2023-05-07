@@ -21,7 +21,7 @@ function contar() {
             }
             p.innerHTML += 'Fim &#x1F3C1'
                 res.appendChild(p)
-            } else {
+            } else if (passo >=1 && inicio >= fim){
                 // Contagem regressiva
                 res.innerHTML = `Contando de ${inicio} ate ${fim}, de ${passo} em ${passo}: <br>`
                 for (inicio;inicio >= fim;inicio -= passo) {

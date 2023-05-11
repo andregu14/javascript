@@ -15,6 +15,8 @@ function adicionar() {
     } else {
         alert('Valor invalido')
     }
+    numero.value = ''
+    numero.focus()
 }
 
 function maiorvalor(n) {

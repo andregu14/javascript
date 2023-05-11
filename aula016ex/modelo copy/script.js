@@ -19,15 +19,6 @@ function adicionar() {
     numero.focus()
 }
 
-function maiorvalor(n) {
-    n.sort()
-    return n[n.length -1]
-}
-
-function menorvalor(n) {
-    n.sort()
-    return n[0]
-}
 
 function somararray() {
     let soma = 0
@@ -44,12 +35,27 @@ function media() {
 }
 
 function finalizar() {
-    p.innerHTML = ''
-    p.innerHTML += `<p>Ao todo, temos ${num.length} numeros cadastrados.</p>`
-    p.innerHTML += `<p>O maior valor informado foi ${maiorvalor(num)}.</p>`
-    p.innerHTML += `<p>O menor valor informado foi ${menorvalor(num)}.</p>`
-    p.innerHTML += `<p>Somando todos os valores temos ${somararray()}</p>`
-    p.innerHTML += `<p>A media dos valores digitados e ${media()}</p>`
-    res.appendChild(p) 
+    if (num.length == 0) {
+        window.alert('Adicione valores antes de finalizar!')
+    } else {
+        let maior = num[0]
+        let menor = num[0]
+        for (let pos in num) {
+            if (num[pos] > maior) {
+                maior = num[pos]
+            }
+            if (num[pos] < menor) {
+                menor = num[pos]
+            }
+        }
+        p.innerHTML = ''
+        p.innerHTML += `<p>Ao todo, temos ${num.length} numeros cadastrados.</p>`
+        p.innerHTML += `<p>O maior valor informado foi ${maior}.</p>`
+        p.innerHTML += `<p>O menor valor informado foi ${menor}.</p>`
+        p.innerHTML += `<p>Somando todos os valores temos ${somararray()}</p>`
+        p.innerHTML += `<p>A media dos valores digitados e ${media()}</p>`
+        res.appendChild(p) 
+    }
+    
 }
     

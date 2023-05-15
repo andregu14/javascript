@@ -19,7 +19,6 @@ function adicionar() {
     numero.focus()
 }
 
-
 function somararray() {
     let soma = 0
     for (let pos in num) {
@@ -56,6 +55,5 @@ function finalizar() {
         p.innerHTML += `<p>A media dos valores digitados e ${media()}</p>`
         res.appendChild(p) 
     }
-    
 }
     

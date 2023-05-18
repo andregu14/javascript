@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antes e Depois</title>
+    <style>
+        button#botao {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Antes e depois</h1>
+    <p>
+        <button id="botao" onclick="clicouBotao()">Antecessor e Sucessor</button>
+    </p>
+</body>
+<script>
+    function clicouBotao() {
+        let numero = window.prompt('Digite um numero inteiro qualquer:')
+        if (Number(numero) != NaN || Number(numero) != undefined) {
+            alert(`Antes de ${numero}, temos o numero ${Number(numero) - 1}. Depois de ${numero} temos ${Number(numero) + 1}.`)
+        }
+    }
+</script>
+</html>

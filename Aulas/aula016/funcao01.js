@@ -5,6 +5,4 @@ function parimp(n) {
         return 'Impar!'
     }
 }
-
-
 console.log(parimp(513))

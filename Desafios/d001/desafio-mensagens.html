@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagens</title>
+    <style>
+        .botao {
+            padding: 15px;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio das Mensagens</h1>
+    <button class="botao" id="botao1" onclick="clicouBotao1()">Botão 1</button>
+    <button class="botao" id="botao2" onclick="clicouBotao2()">Botão 2</button>
+    <button class="botao" id="botao3" onclick="clicouBotao3()">Botão 3</button>
+    <p><button id="limpar" onclick="limpar()">Limpar</button></p>
+</body>
+<script>
+    function clicouBotao1() {
+        botao1.style.background = 'green'
+        window.alert('Você clicou no primeiro Botão')
+    }
+
+    function clicouBotao2() {
+        botao2.style.background = 'green'
+        window.alert('Você clicou no segundo Botão')
+    }
+
+    function clicouBotao3() {
+        botao3.style.background = 'green'
+        window.alert('Você clicou no terceiro Botão')
+    }
+
+    function limpar() {
+        botao3.style.background = 'white'
+        botao2.style.background = 'white'
+        botao1.style.background = 'white'
+    }
+</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula Troco</title>
+    <style>
+        #botao {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando o Troco</h1>
+    <p>
+        <button id="botao" onclick="calculaTroco()">Comprar produto</button>
+    </p>
+</body>
+<script>
+    function locale(x) {
+        let value = x.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})
+        return value
+    }
+
+    function calculaTroco() {
+        let nome_produto = window.prompt('Qual e o produto sendo comprado?')
+        let preco_produto = window.prompt(`Quanto custa ${nome_produto} que voce esta comprando?`)
+        preco_produto = Number(preco_produto)
+        let dinheiro = window.prompt(`Qual foi o valor que voce deu para pagar ${nome_produto}?`)
+        dinheiro = Number(dinheiro)
+        while (dinheiro < preco_produto) {
+            alert(`Falta ${locale(preco_produto - dinheiro)} para completar a compra.`)
+            dinheiro = window.prompt(`Qual foi o valor que voce deu para pagar ${nome_produto}?`)
+            dinheiro = Number(dinheiro)
+        }
+        let troco = preco_produto - dinheiro
+        if (troco <= 0) {
+            alert(`Voce comprou ${nome_produto} que custou ${locale(preco_produto)}.\nDeu ${locale(dinheiro)} em dinheiro e vai receber ${locale(Math.abs(troco))} de troco.\nVolte Sempre!`)
+        } else {
+            alert('[ERRO] Tente novamente.')
+        }
+    }
+</script>
+</html>

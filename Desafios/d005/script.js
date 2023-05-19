@@ -6,12 +6,15 @@ function adequacao(x) { // Formata os numeros para str
 function converteMedidas() { // Recebe e converte os valores do input do usuario
     let res = document.getElementById('res')
     let res_calculo = document.getElementById('res_calculo')
-    let p = document.createElement('p')
+    p = document.createElement('p')
+    p.setAttribute('id', 'num')
 
-    // If p element exists, clear its contents
-    if (p) {
-        p.innerHTML = ''
-    } 
+    let existing_p = res_calculo.querySelector('p')
+    if (existing_p) {
+        res_calculo.removeChild(p)
+    }
+    
+    
 
     distancia = window.prompt('Digite uma distancia em metros (m)')
     while (distancia / 1 != Number(distancia) || distancia == '' || distancia == 0) {
@@ -23,7 +26,6 @@ function converteMedidas() { // Recebe e converte os valores do input do usuario
 
     res.innerHTML = `<h2>A distancia de ${adequacao(distancia)} metros, corresponde a...</h2>`
     
-    p.setAttribute('id', 'num')
 
     p.innerHTML += `${adequacao(distancia / 1000)} quilometros (Km) <br>`
     p.innerHTML += `${adequacao(distancia / 100)} hectometros (Hm) <br>`

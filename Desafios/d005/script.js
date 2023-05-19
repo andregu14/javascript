@@ -1,5 +1,5 @@
-function adequacao(x) { // Formata os numeros para str
-    let a = x.toFixed(2).replace('.', ',')
+function adequacao(x) { // Formata os numeros
+    let a = x.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 3})
     return a
 }
 
@@ -16,11 +16,15 @@ function converteMedidas() {
         // If table element exists, clear its contents
         table.innerHTML = ''
     }
-
+    // Pede para o usuario um input
     distancia = window.prompt('Digite uma distancia em metros (m)')
-    while (distancia / 1 != Number(distancia) || distancia == '' || distancia == 0) {
+
+    // Valida input
+    while (distancia / 1 != Number(distancia) || distancia === '' || distancia == 0 || distancia < 0) {
         distancia = window.prompt('Digite um numero valido em metros (m)')
     }
+
+    // Converte input para number
     distancia = Number(distancia)
 
     res.innerHTML = `<h2>A distancia de ${adequacao(distancia)} metros, corresponde a...</h2>`

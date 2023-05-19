@@ -1,9 +1,9 @@
-function adequacao(x) {
+function adequacao(x) { // Formata os numeros para str
     let a = x.toFixed(2).replace('.', ',')
     return a
 }
 
-function converteMedidas() {
+function converteMedidas() { // Recebe e converte os valores do input do usuario
     let res = document.getElementById('res')
     let res_calculo = document.getElementById('res_calculo')
     let p = document.createElement('p')
@@ -13,7 +13,7 @@ function converteMedidas() {
     
     distancia = window.prompt('Digite uma distancia em metros (m)')
     while (distancia / 1 != Number(distancia) || distancia == '' || distancia == 0) {
-        distancia = window.prompt('Digite uma distancia em metros (m)')
+        distancia = window.prompt('Digite um numero valido em metros (m)')
     }
     distancia = Number(distancia)
     

@@ -7,10 +7,12 @@ function converteMedidas() { // Recebe e converte os valores do input do usuario
     let res = document.getElementById('res')
     let res_calculo = document.getElementById('res_calculo')
     let p = document.createElement('p')
-    
-    
 
-    
+    // If p element exists, clear its contents
+    if (p) {
+        p.innerHTML = ''
+    } 
+
     distancia = window.prompt('Digite uma distancia em metros (m)')
     while (distancia / 1 != Number(distancia) || distancia == '' || distancia == 0) {
         distancia = window.prompt('Digite um numero valido em metros (m)')
@@ -31,6 +33,5 @@ function converteMedidas() { // Recebe e converte os valores do input do usuario
     p.innerHTML += `${adequacao(distancia * 1000)} milimetros (mm) <br>`
     
     res_calculo.appendChild(p)
-    
     
 }

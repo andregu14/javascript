@@ -29,7 +29,7 @@ function converteMedidas() {
 
     res.innerHTML = `<h2>A distancia de ${adequacao(distancia)} metros, corresponde a...</h2>`
 
-    let units = [
+    let units = [ // Array com os valores para calculo
         {unit: 'quilometros (Km)', value: distancia / 1000},
         {unit: 'hectometros (Hm)', value: distancia / 100},
         {unit: 'decametros (Dam)', value: distancia / 10},
@@ -38,7 +38,7 @@ function converteMedidas() {
         {unit: 'milimetros (mm)', value: distancia * 1000}
     ]
 
-    for (let i = 0; i < units.length; i++) {
+    for (let i = 0; i < units.length; i++) { 
         let row = table.insertRow()
         let cell1 = row.insertCell()
         let cell2 = row.insertCell()

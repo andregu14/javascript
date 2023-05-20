@@ -38,7 +38,7 @@ function converteMedidas() {
         {unit: 'milimetros (mm)', value: distancia * 1000}
     ]
 
-    for (let i = 0; i < units.length; i++) { 
+    for (let i = 0; i < units.length; i++) { // Calcula valores com um for loop
         let row = table.insertRow()
         let cell1 = row.insertCell()
         let cell2 = row.insertCell()

@@ -13,7 +13,7 @@ function converteMedidas() {
         table = document.createElement('table')
         res_calculo.appendChild(table)
     } else {
-        // If table element exists, clear its contents
+        // Se a tabela existir vai apagar
         table.innerHTML = ''
     }
     // Pede para o usuario um input

@@ -8,7 +8,7 @@ function converteMedidas() {
     let res_calculo = document.getElementById('res_calculo')
     let table = res_calculo.querySelector('table')
 
-    // If table element does not exist, create it
+    // Se a tabela nao existir vai criar
     if (!table) {
         table = document.createElement('table')
         res_calculo.appendChild(table)

@@ -36,6 +36,6 @@ abc.def@mail.com
 fully-qualified-domain@example.com 
 */
 
-const regex = new RegExp(/^\w*(\-\w)?(\.\w*)?@\w*(-\w*)?\.\w{2,3}(\.\w{2,3})?$/, 'ig')
+const regex = new RegExp(/^\w*(\-\w)?(\.\w*)?@\w*(-\w*)?\.\w{2,3}(\.\w{2,3})?$/)
 
 console.log(regex.test('abc.def@mail'))

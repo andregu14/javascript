@@ -1,4 +1,4 @@
-let reg=/[a-z]/gi
+let reg=/[\w+]/gi
 
 console.log(reg.test('abc'))
 console.log(reg.test('abcdefgh'))

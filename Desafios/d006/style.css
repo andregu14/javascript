@@ -18,15 +18,14 @@ body {
     font-family: var(--default_border);
 }
 
-main {
-    position: relative;
-}
-
 .conteudo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5rem;
+    display: grid;
+    grid-template-areas:
+        ". . .  "
+        ". main . "
+        ". . . "
+    ;
+    gap: 8.5rem;
 }
 
 .conteudo h1 {
@@ -36,6 +35,13 @@ main {
     color: rgb(30, 143, 192);
 }
 
+div.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem 0rem;
+    grid-area: main;
+}
 
 button#botao {
     padding: 1rem;

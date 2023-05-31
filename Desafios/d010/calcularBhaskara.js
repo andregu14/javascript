@@ -14,21 +14,22 @@ function calcularBhaskara () {
     // Recebe o valor de a do usuario e verifica se e valido
     let valor_a = prompt('Qual é o valor de a?')
 
-    while (isNumber(valor_a) == false) {
+    while (isNumber(valor_a) == false || valor_a === null) {
         valor_a = prompt('Digite um valor válido:')
     }
+    console.log('valor de a=', valor_a)
 
     // Recebe o valor de b do usuario e verifica se e valido
     let valor_b = prompt('Qual é o valor de b?')
     
-    while (isNumber(valor_b) == false) {
+    while (isNumber(valor_b) == false || valor_b === null) {
         valor_b = prompt('Digite um valor válido:')
     }
 
     // Recebe o valor de c do usuario e verifica se e valido
     let valor_c = prompt('Qual é o valor de c?')
 
-    while (isNumber(valor_c) == false) {
+    while (isNumber(valor_c) === false || valor_c === null) {
         valor_c = prompt('Digite um valor válido:')
     }
 

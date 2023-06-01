@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,22 @@
     <title>Resolvendo Bhaskara</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <main>
         <h1>Resolvendo Bhaskara</h1>
         <button onclick="calcularBhaskara()">Calcular</button>
-        <p id="res">Considerando uma equação no formato <strong>ax<sup>2</sup> + bx + c =</strong> 0, aperte o botão acima para calcular o valor de <strong>Δ</strong>.</p>
+        <div id="loading" style="display: none;">
+            <img src="https://i.stack.imgur.com/kOnzy.gif" alt="Carregando...">
+        </div>
+        <p id="res">
+            <span id="texto_inicial">
+                Considerando uma equação no formato <strong>ax<sup>2</sup> + bx + c =</strong> 0, aperte o botão acima
+                para calcular o valor de <strong>Δ</strong>.
+            </span>
+        </p>
     </main>
     <script src="calcularBhaskara.js"></script>
 </body>
+
 </html>

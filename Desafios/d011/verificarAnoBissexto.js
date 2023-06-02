@@ -24,7 +24,7 @@ function verificarAnoBissexto() {
         document.getElementById('loading').style.display = 'none'
 
         if (ano % 400 == 0) {
-            res.innerHTML = `<p>O ano de ${ano} <span class='bissexto'>É BISSEXTO</span></p>`
+            res.innerHTML = `<p>O ano de ${ano} <span class='bissexto'>É BISSEXTO</span> &#x2714</p>`
         } else if (ano % 4 == 0 && ano % 100 != 0) {
             res.innerHTML = `<p>O ano de ${ano} <span class='bissexto'>É BISSEXTO</span> &#x2714</p>`
         } else {

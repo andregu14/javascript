@@ -38,7 +38,7 @@ function mudarPreco() {
         variacao_porcentagem = `${resultado_porcentagem.toFixed(2).replace('.', ',')}% pra cima.`
     } else if (preco_atual < preco_anterior) {
         resultado_preco = 'Hoje o produto está mais barato.'
-        variacao_preco = `subiu ${adequacaoBRL(preco_anterior - preco_atual)}`
+        variacao_preco = `caiu ${adequacaoBRL(preco_anterior - preco_atual)}`
         // Calcula a variacao em porcentagem
         let resultado_porcentagem = ((preco_anterior - preco_atual) / preco_atual) * 100
         variacao_porcentagem = `${resultado_porcentagem.toFixed(2).replace('.', ',')}% pra baixo.`

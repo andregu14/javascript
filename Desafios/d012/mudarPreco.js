@@ -56,7 +56,7 @@ function mudarPreco() {
         res.style.display = 'flex'
 
         res.innerHTML += `<h2>Analisando os valores informados</h2>`
-        res.innerHTML += `<p>O produto custava ${adequacaoBRL(preco_anterior)} e agora custa ${preco_atual}.</p>`
+        res.innerHTML += `<p>O produto custava ${adequacaoBRL(preco_anterior)} e agora custa ${adequacaoBRL(preco_atual)}.</p>`
         res.innerHTML += `<p>${resultado_preco}</p>`
         res.innerHTML += `<p>O preço ${variacao_preco} em relação ao preço anterior.</p>`
         res.innerHTML += `<p>Uma variação de ${variacao_porcentagem}</p>`

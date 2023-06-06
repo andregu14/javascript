@@ -12,14 +12,14 @@ function mudarPreco() {
 
     // Recebe o valor do preco anterior e verifica se ele e um valor valido
     let preco_anterior = prompt('Qual era o preço anterior do produto?')
-    while (!isFinite(preco_anterior) || preco_anterior === '') {
+    while (!isFinite(preco_anterior) || preco_anterior == '' || preco_anterior == 0) {
         preco_anterior = prompt('Digite um valor válido para o preço anterior!')
     }
     preco_anterior = Number(preco_anterior)
 
     // Recebe o valor do preco atual e verifica se ele e um valor valido
     let preco_atual = prompt('Qual é o preço atual do produto?')
-    while (!isFinite(preco_atual) || preco_atual === '') {
+    while (!isFinite(preco_atual) || preco_atual == '' || preco_atual == 0) {
         preco_atual = prompt('Digite um valor válido para o preço atual!')
     }
     preco_atual = Number(preco_atual)

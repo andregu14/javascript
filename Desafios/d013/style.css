@@ -35,7 +35,7 @@ main {
     font-weight: 600;
     color: rgb(30, 143, 192);
     border: 0.1rem solid rgba(0, 0, 0, 0.268);
-    padding: 10rem;
+    padding: 5rem;
 }
 
 #loading {

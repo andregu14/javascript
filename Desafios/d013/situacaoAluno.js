@@ -12,7 +12,7 @@ function situacaoAluno() {
         nome_aluno_nao_formatado = prompt('Digite o nome do aluno!')
     }
 
-    // Transforma o nome do aluno com as primeiras letras maiusculas
+    // Transforma o nome do aluno para que as primeiras letras sejam sempre maiusculas
     let nome_aluno = nome_aluno_nao_formatado.replace(/\b\w/g, function(l) { return l.toUpperCase(); });
 
     // Recebe a primeira nota do aluno e verifica se e um valor valido
